@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+body {
+    margin: 0;
+    padding: 0;
+    /* gris oscuro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 630px;
+}
+
+.card {
+    background: #1c1c1c;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255 255 255 / 0.1);
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input {
+    padding: 14px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: #333;
+    color: white;
+    transition: background 0.3s;
+    z-index: 2;
+}
+
+.inputdos {
+    position: absolute;
+    padding: 14px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: #333;
+    color: white;
+    transition: background 0.3s;
+}
+
+.input:focus {
+    background: rgb(207, 31, 31);
+}
+
+.submit-btn {
+    padding: 14px;
+    font-size: 18px;
+    background: #474747;
+    /* azul violeta */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 40px
+}
+
+.submit-btn:hover {
+    background: #4f46e5;
+}
+
+.response-box {
+    margin-top: 25px;
+    padding: 15px;
+    background: #4caf5080;
+    border-left: 6px solid #4caf50;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    word-break: break-word;
+}
+
+
+/* Para ocultar el segundo input (lo mantiene funcional pero invisible) */
+
+.hidden-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    border: none;
+    background: transparent;
+    color: transparent;
+}
+
+.hidden-input.active {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    width: 100%;
+    height: auto;
+    background: #333;
+    color: white;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 20px;
+}
+
+.boquilla-title {
+    font-family: 'Arial Black', Gadget, sans-serif;
+    /* Fuente impactante, puedes cambiarla */
+    font-size: 80px;
+    /* Tamaño grande para que resalte */
+    font-weight: 900;
+    /* Extra bold */
+    text-align: center;
+    margin: 40px 0;
+    /* Espacio superior e inferior */
+    /* --- Efecto de Gradiente de Texto --- */
+    background: linear-gradient( 45deg, /* Ángulo del gradiente */
+    #f6f6f6, /* Azul Violeta */
+    #000000, /* Azul Royal */
+    #464646/* Cian */
+    );
+    -webkit-background-clip: text;
+    /* Crucial para aplicar el gradiente al texto */
+    background-clip: text;
+    /* Estándar, para navegadores modernos */
+    color: transparent;
+    /* Hace el texto transparente para que se vea el gradiente */
+    /* --- Efecto de Contorno (Stroke) --- */
+    -webkit-text-stroke: 2px #FFFFFF;
+    /* Contorno blanco de 2px (para WebKit browsers) */
+    text-stroke: 2px #FFFFFF;
+    /* Contorno blanco de 2px (estándar) */
+    /* Puedes cambiar el color del contorno a algo como #000 (negro) o #FFD700 (dorado) */
+    /* --- Efecto de Sombra (Glow/Neon) --- */
+    text-shadow: 0 0 10px rgba(44, 45, 46, 0.8), /* Sombra ligera (brillo) */
+    0 0 20px rgba(173, 216, 230, 0.6), 0 0 30px rgba(92, 92, 92, 0.4);
+    /* Múltiples sombras para un efecto de brillo más intenso */
+}
